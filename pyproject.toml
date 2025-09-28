@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bus-hound-lite"
+version = "0.1.0"
+description = "Lightweight USB and serial monitoring helper inspired by Bus Hound"
+readme = "README.md"
+authors = [{name = "Bus Hound Lite Maintainers"}]
+requires-python = ">=3.9"
+dependencies = [
+    "pyusb>=1.2.1",
+    "pyserial>=3.5",
+]
+
+[project.scripts]
+bus-hound-lite = "bus_hound_tool.cli:main"
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+testpaths = ["tests"]
+markers = [
+    "asyncio: mark a test as asyncio.",
+]
