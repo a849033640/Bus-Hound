@@ -1,0 +1,3 @@
+*.msi
+__pycache__/
+*.pyc
